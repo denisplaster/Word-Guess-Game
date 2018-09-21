@@ -1,0 +1,38 @@
+body {
+    background-image: url("../images/1_Inconceivable.jpg");
+    background-size: 100% 100%;
+}
+
+header {
+    background-image: url("../images/logo.png");
+    background-size: 100% 100%;
+    font-size: 20px;
+    text-align: center;
+    height: 300px;
+    width: 80%;
+}
+
+.underscore {
+    font-size: 100px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
+
+.rightGuess {
+    font-size: 40px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
+
+.wrongGuess {
+    font-size: 54px;
+    text-align: center;
+    margin: 0 auto;
+    height: 150px;
+    width: 80%;
+}
+
