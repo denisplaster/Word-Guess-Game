@@ -1,52 +1,55 @@
-// Create an array of Words
 var word = ['elsa', 'ariel', 'olaf', 'simba', 'pluto', 'dumbo', 'beast', 'merida', 'mulan'];
-// Choose word randomly
 var ranNum = Math.floor(Math.random() * word.length);
-var choosenWord = word[ranNum];
+var randomWord = word[ranNum];
 var rightWord = [];
 var wrongWord = [];
 var underScore = [];
+var wrongLetter = [];
 
-var docUnderScore = document.getElementsByClassName('underscore')
+
+var docUnderScore = document.getElementsByClassName('underscore');
 var docRightGuess = document.getElementsByClassName('rightGuess');
+var docWrongLetter = document.getElementsByClassName('wrongLetter');
 var docWrongGuess = document.getElementsByClassName('wrongGuess');
 
+
 // ====================================================================================
-console.log(choosenWord);
-// Create underscores based on length of word
-var generateUnderscore = () => {
-    for(let i = 0; i < choosenWord.length; i++) {
+console.log(randomWord);
+var generateUnderscore = function() {
+    for(let i = 0; i < randomWord.length; i++) {
 underScore.push('_');
 }
     return underScore;
 }
 
-// Get users guess
-document.addEventListener('keypress', (event) => {
+document.addEventListener('keypress', function (event) {
     var keyword = String.fromCharCode(event.keyCode);
-// if users guess is right
-    if(choosenWord.indexOf(keyword) > -1) {
-      // add to right words array
-rightWord.push(keyword);
+
+    if(randomWord.indexOf(keyword) > -1) {
+    rightWord.push(keyword);
       
-// replace underscore with letter
-underScore[choosenWord.indexOf(keyword)] = keyword;
+underScore[randomWord.indexOf(keyword)] = keyword;
 docUnderScore[0].innerHTML = underScore.join(' ');
 docRightGuess[0].innerHTML = rightWord;
-//checks to see if user word matches guesses
-    if (underScore.join('') == choosenWord) {
-        alert('You Win');
+
+    if (underScore.join('') == randomWord) {
+        alert('You are not the six fingered man');
 }
 }
     else {
-wrongWord.push(keyword);
-docWrongGuess[0].innerHTML = wrongWord;
-}
+        wrongWord.push(keyword);
+        docWrongGuess[0].innerHTML = wrongWord;
+    }
+    // if (wrongGuess.push(wrongLetter){  
+    //     wrongGuess.push(keyword);  ;
+    //     docWrongLetter[0].innerHTML = wrongLetter;        
+    // }
+        // }
+    if (wrongWord.indexOf(keyword) > 5) {
+    
+        alert('You have been killed by Inigo Montoya');
+        
+    }
 });
 
-
 docUnderScore[0].innerHTML = generateUnderscore().join(' ');
-// Check if guess if right
-
-// if right push to right array
-// if wrong push to wrong array

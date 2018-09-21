@@ -12,6 +12,14 @@ header {
     width: 80%;
 }
 
+.wrongLetter {
+    font-size: 50px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
+
 .underscore {
     font-size: 100px;
     text-align: center;
