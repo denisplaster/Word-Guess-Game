@@ -46,9 +46,10 @@ docRightGuess[0].innerHTML = rightWord;
     // }
         // }
     if (wrongWord.indexOf(keyword) > 5) {
+        
     
         alert('You have been killed by Inigo Montoya');
-        
+        sound = new Audio('../audio/SlippinDMX.mp3')
     }
 });
 
